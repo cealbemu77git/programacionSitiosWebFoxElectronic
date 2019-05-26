@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Producto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    
+    <div class="container"> 
+      <h1>Inventario</h1>
+      <script>
+      </script> 
+      <form name="f1" action="InventarioDado.php" method="POST">
+        <div class="form-group">
+          <label for="numero1">Código de producto</label>
+          <input type="text" class="form-control" id="codigo" placeholder="Ingrese el Código de producto" name="a">
+            <br>
+          <label for="numero2">Nombre de producto</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Ingrese el Nombre de producto" name="b">
+          <br>
+          <label for="numero2">Marca del producto</label>
+          <input type="text" class="form-control" id="marca" placeholder="Ingrese la Marca del producto" name="c">
+          <br>
+          <label for="numero2">Precio de compra</label>
+          <input type="text" class="form-control" id="precio" placeholder="Ingrese el recio de compra" name="b">
+          <br>
+          <label for="numero2">Cantidad comprada</label>
+          <input type="text" class="form-control" id="cantidad" placeholder="Ingrese la Cantidad comprada" name="c">
+          <br>
+          <input type="Button" name="" value="Guardar producto" onclick="insertar()" class="btn btn-primary">
+          <input type="Button" name="" value="Actualizar producto" onclick="actualizar()" class="btn btn-primary">
+          <input type="Button" name="" value="Eliminar producto" onclick="eliminar()" class="btn btn-primary">
+          <input type="Button" name="" value="Consultar producto" onclick="consultar()" class="btn btn-primary">
+          <input type="Button" name="" value="Limpiar" onclick="reset()" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
+    <div class="container">
+            <!-- grid lista de Actividad por tipo de sistema-->
+            <section id="widget-grid" class="">
+              <!-- row -->
+              <div class="row">
+                <!-- NEW WIDGET START -->
+                <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <!-- Widget ID (each widget will need unique ID)-->
+                  <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
+                    <header>
+                      <span class="widget-icon"> 
+                        <i class="fa fa-table"></i>
+                      </span>
+                      <h5>Lista de productos</h5>
+                    </header>
+                    <div style="overflow-y: auto; height:250px;">
+                    <div>
+                      <div class="jarviswidget-editbox"></div>
+                      <div class="widget-body no-padding">
+                        <table id="dt_basic" class="table table-striped table-bordered table-hover"  >
+                          <thead>
+                            <tr style="font-size:10px">
+                              <th style="width: 20%; ">Código de producto</th>
+                              <th style="width: 20%; ">Nombre de producto </th>
+                              <th style="width: 20%; ">Marca del producto</th>
+                              <th style="width: 20%; ">Precio de compra </th>
+                              <th style="width: 20%; ">Cantidad comprada </th>
+                            </tr>
+                          </thead>
+                          <tbody class="tbody">
+                            <tr ng-show="sistemas.length == 0">
+                              <th colspan="8" style="text-align:center;">
+                                No se encontraron productos
+                              </th>
+                            </tr>
+                            <tr ng-repeat="p in consultar | orderBy : 'consultar'" style="font-size:10px">
+                              <td style="display: none;">
+                                {{p.scproducto}}
+                              </td>
+                              <td style="width: 20%;">
+                                {{p.Codigo}}
+                              </td>
+                              <td style="width: 20%;">
+                                {{p.Nombre}}
+                              </td>
+                              <td style="width: 20%;">
+                                {{p.Marca}}
+                              </td>
+                              <td style="width: 20%;">
+                                {{p.Precio}}
+                              </td>
+                              <td style="width: 20%;">
+                                {{p.Cantidad}}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+    </div>
+  </body>
+</html>

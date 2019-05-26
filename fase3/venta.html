@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Venta</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Venta</h1>
+
+
+<script>
+
+
+</script> 
+
+
+
+<form name="f1" action="calculo_venta.html" method="POST">
+    <div class="form-group">
+      
+    <label for="numero1">Código de producto</label>
+    <input type="text" class="form-control" id="a" placeholder="Ingrese el Código de producto" name="a">
+  
+    <br>
+    <label for="numero2">valor de la venta</label>
+    <input type="text" class="form-control" id="b" placeholder="Ingrese el valor de la venta" name="b">
+    <br>
+
+    <label for="numero2">cantidad vendida</label>
+    <input type="text" class="form-control" id="c" placeholder="Ingrese la cantidad vendida" name="c">
+    
+    <br>
+  <input type="Button" name="" value="Generar venta" onclick="generarventa()" class="btn btn-primary">
+  <input type="Button" name="" value="Agregar" onclick="agregar()" class="btn btn-primary">
+  <input type="Button" name="" value="Eliminar" onclick="eliminar()" class="btn btn-primary">
+  <input type="Button" name="" value="Limpiar" onclick="reset()" class="btn btn-primary">
+  <p> <a href='menu.html'>Menu</a></p>
+
+  </div>
+
+</form>
+
+</div>
+<div class="container">
+        <!-- grid lista de Actividad por tipo de sistema-->
+        <section id="widget-grid" class="">
+          <!-- row -->
+          <div class="row">
+            <!-- NEW WIDGET START -->
+            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <!-- Widget ID (each widget will need unique ID)-->
+              <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
+                <header>
+                  <span class="widget-icon"> 
+                    <i class="fa fa-table"></i>
+                  </span>
+                  <h5>Lista de ventas</h5>
+                </header>
+                <div style="overflow-y: auto; height:250px;">
+                <div>
+                  <div class="jarviswidget-editbox"></div>
+                  <div class="widget-body no-padding">
+                    <table id="dt_basic" class="table table-striped table-bordered table-hover"  >
+                      <thead>
+                        <tr style="font-size:10px">
+                          <th style="width: 25%; ">Código</th>
+                          <th style="width: 25%; ">Valor</th>
+                          <th style="width: 25%; ">Cantidad</th>
+                          <th style="width: 25%; ">Valor total</th>
+                        </tr>
+                      </thead>
+                      <tbody class="tbody">
+                        
+                        <tr ng-repeat="" style="font-size:10px">
+                          <td style="width: 25%;">
+                            {{p.codigo}}
+                          </td>
+                          <td style="width: 25%;">
+                            {{p.valor}}
+                          </td>
+                          <td style="width: 25%;">
+                            {{p.cantidad}}
+                          </td>
+                          <td style="width: 25%;">
+                            {{p.valor total}}
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+</div>
+
+
+</body>
+</html>

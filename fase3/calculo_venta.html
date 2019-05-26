@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Venta</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Calcular Venta</h1>
+
+
+<script>
+function suma(){
+    
+    var a = document.f1.a.value;
+    var b = document.f1.b.value;
+    var c = document.f1.c.value;
+    var r = document.f1.d.value;
+    var s = document.f1.e.value;
+   r=parseFloat(a)*(parseFloat(b)/100);//utilidad
+   document.f1.e.value=r;
+    s=(parseFloat(a)*(parseFloat(c)/100))+parseFloat(a);//IVA
+   document.f1.d.value=s;
+}
+
+
+
+</script> 
+
+
+
+<form name="f1" action="calculo_venta.html" method="POST">
+    <div class="form-group">
+      
+    <label for="numero1">Valor producto</label>
+    <input type="text" class="form-control" id="a" placeholder="Ingrese el Valor del producto" name="a">
+  
+    <br>
+    <label for="numero2">% Utilidad</label>
+    <input type="text" class="form-control" id="b" placeholder="Ingrese el porcentaje de Utilidad" name="b">
+    <br>
+
+    <label for="numero2">% IVA</label>
+    <input type="text" class="form-control" id="c" placeholder="Ingrese el porcentaje del IVA" name="c">
+    <br>
+  <input type="Button" name="" value="Calcular" onclick="suma()" class="btn btn-primary">
+  <input type="Button" name="" value="Limpiar" onclick="reset()" class="btn btn-primary">
+  <p> <a href='menu.html'>Menu</a></p>
+  <br><br>
+  <label for="resultado">valor de venta:</label>
+  <input type="text" class="form-control" id="d" name="d" placeholder="Aquí se imprime el valor de venta">
+  <br>
+  <label for="resultado">valor de utilidad:</label>
+  <input type="text" class="form-control" id="e" name="e" placeholder="Aquí se imprime el la utilidad">
+
+
+  </div>
+
+    </form>
+
+
+      
+</div>
+
+</body>
+</html>

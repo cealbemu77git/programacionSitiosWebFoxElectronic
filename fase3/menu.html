@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Menu Entrada</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Tienda Fox electronics</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="../pages/bd.html">Administrador de DB</a>
+    </li>
+<!-- Inventario -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Inventario
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="../Inventario.php">Ingreso de producto</a>
+        <a class="dropdown-item" href="../ConsultaProduct.html">Consulta de producto</a>
+        <a class="dropdown-item" href="#">Actualización de producto</a>
+        <a class="dropdown-item" href="../EliminarProducto.html">Eliminación de producto</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="venta.html">Ventas</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Utilidades
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="calculo_venta.html">calcular venta</a>
+        <a class="dropdown-item" href="resistencia.html">calculadora de resistencias</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../login.php">Salir</a>
+    </li>
+  </ul>
+</nav>
+<br>
+  
+<div class="container">
+  <h3>Fox Electronics</h3>
+  <p>Comercialización de componentes electrónicos tales como:</p>
+  <p>resistencias, transistores, circuitos integrados</p>
+  <p>sistemas embebidos, condensadores, bobinas</p>
+  <div>
+    <a href="#"><img src="img/Captura1.PNG" width="500" alt="Captura3"></a>
+  </div>
+</div>
+<aside>
+  <img src="https://counter5.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=nja9nct8tpscwn5gm3jd34mu3j6gw2gn" width="70" title="contador de visitas web" >
+</aside>
+
+</body>
+</html>

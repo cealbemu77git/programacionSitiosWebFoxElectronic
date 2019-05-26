@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Calculadora</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Calculadora</h1>
+
+
+<script>
+function suma(){
+    
+    var a = document.f1.a.value;
+    var b = document.f1.b.value;
+    var r = document.f1.c.value;
+   r=parseFloat(a)+parseFloat(b);
+   document.f1.c.value=r;
+    
+}
+
+function resta(){
+    
+    var a = document.f1.a.value;
+    var b = document.f1.b.value;
+    var r = document.f1.c.value;
+   r=parseFloat(a)-parseFloat(b);
+   document.f1.c.value=r;
+    
+}
+
+function multiplicacion(){
+    
+    var a = document.f1.a.value;
+    var b = document.f1.b.value;
+    var r = document.f1.c.value;
+   r=parseFloat(a)*parseFloat(b);
+   document.f1.c.value=r;
+    
+}
+
+function division(){
+    
+    var a = document.f1.a.value;
+    var b = document.f1.b.value;
+    var r = document.f1.c.value;
+   r=parseFloat(a)/parseFloat(b);
+   //document.f1.c.value=r;
+   alert('El resultado de la división es: '+r);
+    
+}
+
+function porcentaje(){
+    
+    var a = document.f1.a.value;
+    var b = document.f1.b.value;
+    var r = document.f1.c.value;
+   r=parseFloat(a)*(parseFloat(b)/100);
+   document.f1.c.value=r;
+    
+}
+
+</script> 
+
+
+
+<form name="f1" action="calcuadora.html" method="POST">
+    <div class="form-group">
+    	
+    <label for="numero1">Número 1:</label>
+    <input type="text" class="form-control" id="a" placeholder="Ingrese un número" name="a">
+	
+    <br>
+    <label for="numero2">Número 2:</label>
+    <input type="text" class="form-control" id="b" placeholder="Ingrese un número" name="b">
+    <br>
+	<input type="Button" name="" value="sumar" onclick="suma()" class="btn btn-primary">
+  <input type="Button" name="" value="restar" onclick="resta()" class="btn btn-success">
+  <input type="Button" name="" value="multiplicar" onclick="multiplicacion()" class="btn btn-warning">
+  <input type="Button" name="" value="dividir" onclick="division()" class="btn btn-danger">
+  <input type="Button" name="" value="porcentaje" onclick="porcentaje()" class="btn btn-success">
+  <input type="Button" name="" value="Limpiar" onclick="reset()" class="btn btn-primary">
+	<br><br>
+  <label for="resultado">Resultado:</label>
+  <input type="text" class="form-control" id="c" name="c" placeholder="Aquí se imprime el resultado">
+
+	</div>
+
+  	</form>
+
+
+      
+</div>
+
+</body>
+</html>

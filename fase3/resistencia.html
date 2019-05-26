@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Calculadora de resistencias</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Calculadora de resistencias</h1>
+
+
+<script>
+function calcular(){
+    
+    var a = document.f1.b1.value;
+    var b = document.f1.b2.value;
+    var x = document.f1.b3.value;
+    var r = document.f1.c.value;
+    r1= a.toString()+b.toString();
+    r=parseFloat(r1)*parseFloat(x);
+   document.f1.c.value=r +" Ohm";
+    
+}
+
+</script> 
+
+
+
+<form name="f1" action="resistencia.html" method="POST">
+    
+
+ <h3>Banda 1</h3>     
+<select name="b1" class="form-control">
+  <option value="0" >Negro</option>
+  <option value="1" >Marron</option>
+  <option value="2" >Rojo</option>
+</select>
+
+<br><br>
+
+ <h3>Banda 2</h3> 
+<select name="b2" class="form-control">
+  <option value="0" >Negro</option>
+  <option value="1" >Marron</option>
+  <option value="2" >Rojo</option>
+</select>
+
+<br><br>
+
+<h3>Banda 3</h3> 
+<select name="b3" class="form-control">
+  <option value="1" >Negro</option>
+  <option value="10" >Marron</option>
+  <option value="100" >Rojo</option>
+</select>
+ 
+	<br><br>
+  <input type="Button" name="" value="calcular" onclick="calcular()" class="btn btn-primary">
+  <p> <a href='menu.html'>Menu</a></p>
+  <br><br>
+  <label for="resultado">Resultado:</label>
+  <input type="text" class="form-control" id="c" name="c" placeholder="Aquí se imprime el resultado">
+
+	</div>
+
+  	</form>
+
+
+
+
+      
+</div>
+
+</body>
+</html>
